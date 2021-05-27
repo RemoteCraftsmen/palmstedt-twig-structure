@@ -21,8 +21,12 @@ header .container {
 }
 
 header .container .logo {
-    width: 150px;
+    width: 200px;
     display: inline-block;
+}
+
+header .container nav {
+    margin:10px 0;
 }
 
 header .container nav ul li {

@@ -1,21 +1,16 @@
-<header >
+<header>
     <div class="container">
-        <a href="#" class="logo">
-            <img src="https://assets.noblechairs.com/assets/noblechairs/images/logo.svg" alt="">
-        </a>
+        {% include 'components/atoms/logo/logo.html.twig'
+            with {
+               src: logoSrc | default('')
+            }
+        %}
         <nav>
-            <ul>
-                <li>
-                    <a href="#">Limited Editions</a>
-                </li>
-                <li>
-                    <a href="#">Premium Stühle</a>
-                </li>
-                <li>
-                    <a href="#">Zubehör</a>
-                </li>
-
-            </ul>
+            {% include 'components/molecules/list/list.html.twig'
+                with {
+                    items: menuItems | default([])
+                }
+            %}
         </nav>
     </div>
 </header>

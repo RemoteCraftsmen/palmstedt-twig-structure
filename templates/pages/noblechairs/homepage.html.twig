@@ -1,7 +1,16 @@
 {% extends 'layouts/base.html.twig' %}
 
 {% block header %}
-    {% include 'components/organisms/header/header.html.twig' %}
+    {% include 'components/organisms/header/header.html.twig'
+        with {
+            logoSrc: 'https://assets.noblechairs.com/assets/noblechairs/images/logo.svg',
+            menuItems: [
+                { title: 'Premium Stühle', link: '#faq' },
+                { title: 'Limited Editions', link: '#editions' },
+                { title: 'Zubehör', link: '#ruckgabe' },
+            ]
+        }
+    %}
 {% endblock %}
 
 {% block body %}

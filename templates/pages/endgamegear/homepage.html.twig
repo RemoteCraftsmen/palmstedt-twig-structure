@@ -1,7 +1,37 @@
-{% extends 'base.html.twig' %}
+{% extends 'layouts/base.html.twig' %}
+
+{% block header %}
+    {% include 'components/organisms/header/header.html.twig'
+        with {
+        logoSrc: 'https://assets.noblechairs.com/assets/noblechairs/images/logo.svg',
+        menuItems: [
+            { title: 'Premium Stühle', link: '#faq' },
+            { title: 'Limited Editions', link: '#editions' },
+            { title: 'Zubehör', link: '#ruckgabe' },
+        ]
+    }
+    %}
+{% endblock %}
 
 {% block body %}
-    <h1>Blog Application</h1>
+    {% include 'components/molecules/image/image.html.twig'
+        with {
+            title: 'EPIC',
+            description: 'Der Beginn einer außergewöhnlichen Reise',
+            cta: 'AUFBRECHEN',
+            ctaClass: 'bg-white'
+        }
+    %}
+    {% include 'components/molecules/image/image.html.twig'
+        with {
+            src: 'https://img.noblechairs.com/homepage-redesign/hero56_desktop.jpg?auto=compress,format&amp;fit=max&amp;q=70',
+            title: 'HERO',
+            description: ' Werde zum Helden',
+            cta: 'EXZELLENZ ERLEBEN',
+        }
+    %}
+{% endblock %}
 
-    {% block content %}{% endblock %}
+{% block footer %}
+    {% include 'components/organisms/footer/footer.html.twig' %}
 {% endblock %}
