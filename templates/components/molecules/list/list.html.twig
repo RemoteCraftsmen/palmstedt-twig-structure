@@ -1,0 +1,12 @@
+<ul>
+    {% for item in items %}
+        <li>
+            {% include 'components/atoms/link/link.html.twig'
+                with {
+                    title: item.title | default('No link name'),
+                    link: item.link | default('#')
+                }
+            %}
+        </li>
+    {% endfor %}
+</ul>

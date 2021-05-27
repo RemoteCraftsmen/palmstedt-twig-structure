@@ -1,31 +1,26 @@
 {% extends 'layouts/base.html.twig' %}
 
 {% block header %}
-    {% include 'components/organisms/header/header.html.twig' with { props: { icon: 'arrow' }} %}
+    {% include 'components/organisms/header/header.html.twig' %}
 {% endblock %}
 
 {% block body %}
-    {% include 'components/organisms/image/image.html.twig'
+    {% include 'components/molecules/image/image.html.twig'
         with {
-            props: {
-                src: 'https://img.noblechairs.com/homepage-redesign/epic1_desktop.jpg',
-                title: 'EPIC',
-                description: 'Der Beginn einer außergewöhnlichen Reise',
-                cta: 'AUFBRECHEN'
-            }
+            title: 'EPIC',
+            description: 'Der Beginn einer außergewöhnlichen Reise',
+            cta: 'AUFBRECHEN',
+            ctaClass: 'bg-white'
         }
     %}
-    {% include 'components/organisms/image/image.html.twig'
+    {% include 'components/molecules/image/image.html.twig'
         with {
-            props: {
-                src: 'https://img.noblechairs.com/homepage-redesign/hero56_desktop.jpg',
-                title: 'HERO',
-                description: ' Werde zum Helden',
-                cta: 'EXZELLENZ ERLEBEN'
-            }
+            src: 'https://img.noblechairs.com/homepage-redesign/hero56_desktop.jpg?auto=compress,format&amp;fit=max&amp;q=70',
+            title: 'HERO',
+            description: ' Werde zum Helden',
+            cta: 'EXZELLENZ ERLEBEN',
         }
     %}
-
 {% endblock %}
 
 {% block footer %}

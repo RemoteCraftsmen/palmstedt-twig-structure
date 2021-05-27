@@ -1,0 +1,22 @@
+<div class="parallax" style="background-image: url('{{ src | default('https://img.noblechairs.com/homepage-redesign/epic1_desktop.jpg?auto=compress,format&amp;fit=max&amp;q=70') }}')">
+    <div class="content-wrapper">
+
+        {% include 'components/atoms/heading/heading.html.twig'
+            with {
+                title: title | default('HERO IMAGE TITLE'),
+                level: 2
+            }
+        %}
+        <p>
+            {{ description | default('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, sequi.') }}
+        </p>
+        <div>
+            {% include 'components/atoms/button/button.html.twig'
+                with {
+                    title: cta,
+                    class: ctaClass|default('')
+                }
+            %}
+        </div>
+    </div>
+</div>

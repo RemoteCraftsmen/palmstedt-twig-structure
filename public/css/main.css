@@ -10,6 +10,10 @@ body {
     margin:0 auto;
 }
 
+header {
+    border-bottom: 1px solid gray;
+}
+
 header .container {
     display: flex;
     justify-content: space-between;
@@ -32,10 +36,6 @@ header .container nav ul li a {
     margin-right:20px;
 }
 
-header {
-    border-bottom:1px solid gray;
-}
-
 .parallax {
     background-size: cover;
     background-repeat: no-repeat;
@@ -53,16 +53,32 @@ header {
     flex-flow: column nowrap;
     color: #fff;
 }
-
 .parallax .content-wrapper button {
-    background: #fff;
     text-transform: uppercase;
-    border:0;
     padding:10px 20px;
+    border:2px #fff solid;
+    background-color: transparent;
+    color: #fff;
 }
 
+.parallax .content-wrapper button:hover {
+    background-color: #fff;
+    color:#000;
+}
+
+.parallax .content-wrapper button.bg-white {
+    background-color: #fff;
+    color:#000;
+}
+
+.parallax .content-wrapper button.bg-white:hover {
+    background-color: inherit;
+    color:#fff;
+}
+
+
 footer {
-    margin-top:20px;
+    margin:50px 0;
     color:#fff;
 }
 
@@ -85,4 +101,3 @@ footer .container a {
     color: #808080;
     text-decoration: none;
 }
-

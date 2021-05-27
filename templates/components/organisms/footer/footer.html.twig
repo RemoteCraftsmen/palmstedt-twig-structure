@@ -9,29 +9,59 @@
             </button>
         </div>
         <div>
-            <h3>Shop</h3>
-            <ul>
-                <li><a href="#">Premium Stühle</a></li>
-                <li><a href="#">Limited Editions</a></li>
-                <li><a href="#">Zubehör</a></li>
+            {% include 'components/atoms/heading/heading.html.twig'
+                with {
+                title: 'Shop',
+                level: 3
+            }
+            %}
+            {% include 'components/molecules/list/list.html.twig'
+                with {
+                items: [
+                    { title: 'Premium Stühle', link: '#faq' },
+                    { title: 'Limited Editions', link: '#editions' },
+                    { title: 'Zubehör', link: '#ruckgabe' },
+                    { title: 'International Resellers', link: '#resellers' }
+                ]
+            }
+            %}
+        </div>
+        <div>
+            {% include 'components/atoms/heading/heading.html.twig'
+                with {
+                title: 'Zubehör',
+                level: 3
+            }
+            %}
+            {% include 'components/molecules/list/list.html.twig'
+                with {
+                    items: [
+                        { title: 'FAQ', link: '#faq' },
+                        { title: 'Limited Editions', link: '#editions' },
+                        { title: 'Rückgabe', link: '#ruckgabe' },
+                        { title: 'International Resellers', link: '#resellers' }
+                    ]
+                }
+            %}
 
-            </ul>
         </div>
         <div>
-            <h3>Informationen</h3>
-            <ul>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Rückgabe</a></li>
-                <li><a href="#">International Resellers</a></li>
-            </ul>
-        </div>
-        <div>
-            <h3>Informationen</h3>
-            <ul>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Rückgabe</a></li>
-                <li><a href="#">International Resellers</a></li>
-            </ul>
+            {% include 'components/atoms/heading/heading.html.twig'
+                with {
+                title: 'Informationen',
+                level: 3
+            }
+            %}
+            {% include 'components/molecules/list/list.html.twig'
+                with {
+                items: [
+                    { title: 'Rückgabe', link: '#ruckgabe' },
+                    { title: 'Zubehör', link: '#faq' },
+                    { title: 'Limited Editions', link: '#editions' },
+                    { title: 'Premium Stühle', link: '#faq' },
+                ]
+            }
+            %}
         </div>
     </div>
 </footer>
