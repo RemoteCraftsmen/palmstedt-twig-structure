@@ -1,3 +1,7 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+noblechairs:
+  path: /noblechairs
+  controller: App\Controller\IndexController::noblechairs

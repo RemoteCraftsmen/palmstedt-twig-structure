@@ -1,0 +1,33 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block header %}
+    {% include 'components/organisms/header/header.html.twig' with { props: { icon: 'arrow' }} %}
+{% endblock %}
+
+{% block body %}
+    {% include 'components/organisms/image/image.html.twig'
+        with {
+            props: {
+                src: 'https://img.noblechairs.com/homepage-redesign/epic1_desktop.jpg',
+                title: 'EPIC',
+                description: 'Der Beginn einer außergewöhnlichen Reise',
+                cta: 'AUFBRECHEN'
+            }
+        }
+    %}
+    {% include 'components/organisms/image/image.html.twig'
+        with {
+            props: {
+                src: 'https://img.noblechairs.com/homepage-redesign/hero56_desktop.jpg',
+                title: 'HERO',
+                description: ' Werde zum Helden',
+                cta: 'EXZELLENZ ERLEBEN'
+            }
+        }
+    %}
+
+{% endblock %}
+
+{% block footer %}
+    {% include 'components/organisms/footer/footer.html.twig' %}
+{% endblock %}
