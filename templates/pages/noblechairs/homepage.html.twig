@@ -1,5 +1,8 @@
 {% extends 'layouts/base.html.twig' %}
 
+{% set bodyTagClass = 'bg-black font-helvetica' %}
+{% block title bodyTagClass %}
+
 {% block header %}
     {% include 'components/organisms/header/header.html.twig'
         with {

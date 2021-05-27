@@ -9,7 +9,7 @@
     </head>
 
     {% block bodyTag %}
-        <body>
+        <body class="{{ bodyTagClass | default('') }}">
     {% endblock %}
 
     {% block header %}

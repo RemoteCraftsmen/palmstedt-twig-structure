@@ -1,7 +1,19 @@
-body {
+body.bg-black {
     background-color: #000;
     color: #a8a7a6;
+}
+
+body.bg-gray {
+    background-color: #272727;
+    color: #fff;
+}
+
+body.font-helvetica {
     font-family: Helvetica, sans-serif;
+}
+
+body.font-tnr {
+    font-family: 'Times New Roman', serif;
 }
 
 .container {

@@ -1,13 +1,16 @@
 {% extends 'layouts/base.html.twig' %}
 
+{% set bodyTagClass = 'bg-gray font-tnr' %}
+{% block title bodyTagClass %}
+
 {% block header %}
     {% include 'components/organisms/header/header.html.twig'
         with {
-        logoSrc: 'https://assets.noblechairs.com/assets/noblechairs/images/logo.svg',
+        logoSrc: 'https://assets.endgamegear.com/assets/endgamegear/images/logo.svg',
         menuItems: [
-            { title: 'Premium Stühle', link: '#faq' },
-            { title: 'Limited Editions', link: '#editions' },
-            { title: 'Zubehör', link: '#ruckgabe' },
+            { title: 'Mäuse', link: '#mause' },
+            { title: 'Mauspads', link: '#mauspads' },
+            { title: 'Zubehör', link: '#zubehor' },
         ]
     }
     %}
@@ -16,6 +19,7 @@
 {% block body %}
     {% include 'components/molecules/image/image.html.twig'
         with {
+            src: 'https://img.endgamegear.com/hp/about-wallpaper.jpg?auto=compress%2Cformat&fit=max&q=70',
             title: 'EPIC',
             description: 'Der Beginn einer außergewöhnlichen Reise',
             cta: 'AUFBRECHEN',

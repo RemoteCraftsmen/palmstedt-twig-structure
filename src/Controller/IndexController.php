@@ -6,8 +6,14 @@ use Symfony\Component\HttpFoundation\Response;
 
 class IndexController extends AbstractController
 {
-    public function noblechairs(): Response
+    public function index($slug): Response
     {
-        return $this->render('pages/noblechairs/homepage.html.twig');
+        if (empty($slug) || !in_array($slug, ['noblechairs', 'endgamegear']) ) {
+            return new Response(
+                '<html><body>Not found</body></html>'
+            );
+        }
+
+        return $this->render('pages/'. $slug .'/homepage.html.twig');
     }
 }
