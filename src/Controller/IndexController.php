@@ -9,9 +9,7 @@ class IndexController extends AbstractController
     public function index($slug): Response
     {
         if (empty($slug) || !in_array($slug, ['noblechairs', 'endgamegear']) ) {
-            return new Response(
-                '<html><body>Not found</body></html>'
-            );
+            return $this->redirect('/noblechairs', 301);
         }
 
         return $this->render('pages/'. $slug .'/homepage.html.twig');
