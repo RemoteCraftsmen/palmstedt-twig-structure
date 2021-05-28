@@ -8,18 +8,14 @@
         {% endblock %}
     </head>
 
-    {% block bodyTag %}
-        <body class="{{ bodyTagClass | default('') }}">
-    {% endblock %}
+    <body class="{{ bodyTagClass | default('') }}">
+        {% block header %}
+        {% endblock %}
 
-    {% block header %}
-    {% endblock %}
+        {% block body %}
+        {% endblock %}
 
-    {% block body %}
-    {% endblock %}
-
-    {% block footer %}
-    {% endblock %}
-
+        {% block footer %}
+        {% endblock %}
     </body>
 </html>

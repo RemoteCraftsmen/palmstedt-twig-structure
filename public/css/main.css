@@ -119,12 +119,16 @@ footer .container ul li:hover a {
     text-shadow: 0 0 6px #888888;
 }
 
-/* Theme yellow modifiers */
+/* Child theme modifiers - theme yellow */
 
 .theme-yellow {
     background-color: #272727;
     color: #fff;
     font-family: 'Times New Roman', serif;
+}
+
+.theme-yellow header {
+    border:0;
 }
 
 .theme-yellow .button.bg-full {
