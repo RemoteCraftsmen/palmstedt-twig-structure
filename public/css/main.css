@@ -1,19 +1,7 @@
-body.bg-black {
+body {
     background-color: #000;
     color: #a8a7a6;
-}
-
-body.bg-gray {
-    background-color: #272727;
-    color: #fff;
-}
-
-body.font-helvetica {
     font-family: Helvetica, sans-serif;
-}
-
-body.font-tnr {
-    font-family: 'Times New Roman', serif;
 }
 
 .container {
@@ -52,6 +40,10 @@ header .container nav ul li a {
     margin-right:20px;
 }
 
+header .container nav ul li:hover a {
+    color: #afafaf;
+}
+
 .parallax {
     background-size: cover;
     background-repeat: no-repeat;
@@ -69,7 +61,8 @@ header .container nav ul li a {
     flex-flow: column nowrap;
     color: #fff;
 }
-.parallax .content-wrapper button {
+
+.button {
     text-transform: uppercase;
     padding:10px 20px;
     border:2px #fff solid;
@@ -77,21 +70,21 @@ header .container nav ul li a {
     color: #fff;
 }
 
-.parallax .content-wrapper button:hover {
+.button:hover {
     background-color: #fff;
     color:#000;
 }
 
-.parallax .content-wrapper button.bg-white {
+.button.bg-full {
     background-color: #fff;
+    border-color: #fff;
     color:#000;
 }
 
-.parallax .content-wrapper button.bg-white:hover {
-    background-color: inherit;
+.button.bg-full:hover {
+    background-color: transparent;
     color:#fff;
 }
-
 
 footer {
     margin:50px 0;
@@ -113,7 +106,64 @@ footer .container ul li {
     margin: 10px 0;
 }
 
-footer .container a {
+footer .container ul li a {
     color: #808080;
     text-decoration: none;
+}
+
+footer .container ul li:hover a {
+    color: #cccccc;
+}
+
+.parallax.bg-light .content-wrapper * {
+    text-shadow: 0 0 6px #888888;
+}
+
+/* Theme yellow modifiers */
+
+.theme-yellow {
+    background-color: #272727;
+    color: #fff;
+    font-family: 'Times New Roman', serif;
+}
+
+.theme-yellow .button.bg-full {
+    background-color: #fdc415;
+    border-color: #fdc415;
+    color:#000;
+}
+
+.theme-yellow  .button.bg-full:hover {
+    background-color: inherit;
+    color: #fdc415;
+}
+
+.theme-yellow header nav ul li a {
+    color: #a3a3a3;
+}
+
+.theme-yellow header nav ul li:hover a {
+    color: #fdc415;
+}
+
+.theme-yellow .parallax .content-wrapper h2 {
+    color: #fdc415;
+}
+
+.theme-yellow .button {
+    border-color: #fdc415;
+    color: #fdc415;
+}
+
+.theme-yellow .button:hover {
+    background-color: #fdc415;
+    color: #000;
+}
+
+.theme-yellow footer h3 {
+    color: #fdc415;
+}
+
+.theme-yellow footer ul li a {
+    color: #a3a3a3;
 }

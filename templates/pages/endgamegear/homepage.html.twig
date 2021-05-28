@@ -1,6 +1,6 @@
 {% extends 'layouts/base.html.twig' %}
 
-{% set bodyTagClass = 'bg-gray font-tnr' %}
+{% set bodyTagClass = 'theme-yellow' %}
 {% block title bodyTagClass %}
 
 {% block header %}
@@ -20,22 +20,56 @@
     {% include 'components/molecules/image/image.html.twig'
         with {
             src: 'https://img.endgamegear.com/hp/about-wallpaper.jpg?auto=compress%2Cformat&fit=max&q=70',
-            title: 'EPIC',
-            description: 'Der Beginn einer außergewöhnlichen Reise',
-            cta: 'AUFBRECHEN',
-            ctaClass: 'bg-white'
+            title: 'Precision redefined',
+            description: 'Jetzt mit neuem Sensor, Switches und Skate-Design, verbessertem Kabel und neuen Farbvarianten!',
+            cta: 'Mehr erfahren',
+            ctaClass: 'bg-full'
         }
     %}
     {% include 'components/molecules/image/image.html.twig'
         with {
-            src: 'https://img.noblechairs.com/homepage-redesign/hero56_desktop.jpg?auto=compress,format&amp;fit=max&amp;q=70',
-            title: 'HERO',
-            description: ' Werde zum Helden',
-            cta: 'EXZELLENZ ERLEBEN',
+            src: 'https://img.noblechairs.com/homepage-redesign/accessories1_desktop.jpg?auto=compress,format&fit=max&q=70',
+            title: 'NEU! XM1 RGB',
+            description: 'Professionelle Gaming-Maus für ambitionierte Gamer mit Style',
+            cta: 'Jetzt shoppen',
+            class: "bg-light"
         }
     %}
 {% endblock %}
 
 {% block footer %}
-    {% include 'components/organisms/footer/footer.html.twig' %}
+    {% include 'components/organisms/footer/footer.html.twig'
+        with {
+            button: {
+                title: 'Jetzt shoppen',
+            },
+            section_1: {
+                title: 'Shop',
+                items: [
+                    { title: 'Premium Stühle', link: '#faq' },
+                    { title: 'Limited Editions', link: '#editions' },
+                    { title: 'Zubehör', link: '#ruckgabe' },
+                    { title: 'International Resellers', link: '#resellers' }
+                ]
+            },
+            section_2: {
+                title: 'Zubehör',
+                items: [
+                    { title: 'FAQ', link: '#faq' },
+                    { title: 'Limited Editions', link: '#editions' },
+                    { title: 'Rückgabe', link: '#ruckgabe' },
+                    { title: 'International Resellers', link: '#resellers' }
+                ]
+            },
+            section_3: {
+                title: 'Informationen',
+                items: [
+                    { title: 'Rückgabe', link: '#ruckgabe' },
+                    { title: 'Zubehör', link: '#faq' },
+                    { title: 'Limited Editions', link: '#editions' },
+                    { title: 'Premium Stühle', link: '#faq' },
+                ]
+            }
+        }
+    %}
 {% endblock %}

@@ -1,8 +1,5 @@
 {% extends 'layouts/base.html.twig' %}
 
-{% set bodyTagClass = 'bg-black font-helvetica' %}
-{% block title bodyTagClass %}
-
 {% block header %}
     {% include 'components/organisms/header/header.html.twig'
         with {
@@ -22,7 +19,7 @@
             title: 'EPIC',
             description: 'Der Beginn einer außergewöhnlichen Reise',
             cta: 'AUFBRECHEN',
-            ctaClass: 'bg-white'
+            ctaClass: 'bg-full'
         }
     %}
     {% include 'components/molecules/image/image.html.twig'
@@ -36,5 +33,39 @@
 {% endblock %}
 
 {% block footer %}
-    {% include 'components/organisms/footer/footer.html.twig' %}
+    {% include 'components/organisms/footer/footer.html.twig'
+        with {
+            button: {
+                title: 'Jetzt shoppen',
+                class: 'bg-full'
+            },
+            section_1: {
+                title: 'Shop',
+                items: [
+                    { title: 'Premium Stühle', link: '#faq' },
+                    { title: 'Limited Editions', link: '#editions' },
+                    { title: 'Zubehör', link: '#ruckgabe' },
+                    { title: 'International Resellers', link: '#resellers' }
+                ]
+            },
+            section_2: {
+                title: 'Zubehör',
+                items: [
+                    { title: 'FAQ', link: '#faq' },
+                    { title: 'Limited Editions', link: '#editions' },
+                    { title: 'Rückgabe', link: '#ruckgabe' },
+                    { title: 'International Resellers', link: '#resellers' }
+                ]
+            },
+            section_3: {
+                title: 'Informationen',
+                items: [
+                    { title: 'Rückgabe', link: '#ruckgabe' },
+                    { title: 'Zubehör', link: '#faq' },
+                    { title: 'Limited Editions', link: '#editions' },
+                    { title: 'Premium Stühle', link: '#faq' },
+                ]
+            }
+        }
+    %}
 {% endblock %}

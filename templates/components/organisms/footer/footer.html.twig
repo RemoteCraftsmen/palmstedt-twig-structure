@@ -1,65 +1,49 @@
 <footer>
     <div class="container">
         <div>
-            <div class="icons">
-                <a href=""></a><a href=""></a><a href=""></a><a href=""></a><a href=""></a>
-            </div>
-            <button>
-                FAQ & Contakt
-            </button>
-        </div>
-        <div>
-            {% include 'components/atoms/heading/heading.html.twig'
+            {% include 'components/atoms/button/button.html.twig'
                 with {
-                title: 'Shop',
-                level: 3
-            }
-            %}
-            {% include 'components/molecules/list/list.html.twig'
-                with {
-                    items: [
-                        { title: 'Premium Stühle', link: '#faq' },
-                        { title: 'Limited Editions', link: '#editions' },
-                        { title: 'Zubehör', link: '#ruckgabe' },
-                        { title: 'International Resellers', link: '#resellers' }
-                    ]
+                    cta: button.title,
+                    class: button.class|default('')
                 }
             %}
         </div>
         <div>
             {% include 'components/atoms/heading/heading.html.twig'
                 with {
-                    title: 'Zubehör',
+                    title: section_1.title,
                     level: 3
                 }
             %}
             {% include 'components/molecules/list/list.html.twig'
                 with {
-                    items: [
-                        { title: 'FAQ', link: '#faq' },
-                        { title: 'Limited Editions', link: '#editions' },
-                        { title: 'Rückgabe', link: '#ruckgabe' },
-                        { title: 'International Resellers', link: '#resellers' }
-                    ]
+                    items: section_1.items
                 }
             %}
-
         </div>
         <div>
             {% include 'components/atoms/heading/heading.html.twig'
                 with {
-                    title: 'Informationen',
+                    title: section_2.title,
                     level: 3
                 }
             %}
             {% include 'components/molecules/list/list.html.twig'
                 with {
-                    items: [
-                        { title: 'Rückgabe', link: '#ruckgabe' },
-                        { title: 'Zubehör', link: '#faq' },
-                        { title: 'Limited Editions', link: '#editions' },
-                        { title: 'Premium Stühle', link: '#faq' },
-                    ]
+                    items: section_2.items
+                }
+            %}
+        </div>
+        <div>
+            {% include 'components/atoms/heading/heading.html.twig'
+                with {
+                    title: section_3.title,
+                    level: 3
+                }
+            %}
+            {% include 'components/molecules/list/list.html.twig'
+                with {
+                    items: section_3.items
                 }
             %}
         </div>
