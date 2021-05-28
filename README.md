@@ -14,6 +14,22 @@ $ git clone https://github.com/RemoteCraftsmen/palmstedt-twig-structure
 $ cd palmstedt-twig-structure/
 ```
 
+* Download composer.phar (optional)
+
+```
+curl -s https://getcomposer.org/installer | php
+```
+
+* Install dependencies with composer
+
+`$ composer install` or `$ php composer.phar install`
+
+* Install symfony
+
+```
+curl -sS https://get.symfony.com/cli/installer | bash
+```
+
 * Start the server with Symfony CLI
 
 ```

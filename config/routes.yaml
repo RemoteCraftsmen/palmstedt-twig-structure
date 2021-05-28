@@ -1,7 +1,3 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
-
 IndexController:
-  path: /{slug}
+  path: /{slug?}
   controller: App\Controller\IndexController::index

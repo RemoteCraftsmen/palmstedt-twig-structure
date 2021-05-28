@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class IndexController extends AbstractController
 {
-    public function index($slug): Response
+    public function index($slug = null): Response
     {
         if (empty($slug) || !in_array($slug, ['noblechairs', 'endgamegear']) ) {
             return $this->redirect('/noblechairs', 301);
